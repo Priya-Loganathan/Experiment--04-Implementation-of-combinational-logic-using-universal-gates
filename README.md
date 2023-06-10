@@ -59,12 +59,11 @@ endmodule
 
 ## Output:
 ## RTL
-![image](https://user-images.githubusercontent.com/121166075/232978985-a3e6b3c7-8402-4b47-b2a5-9e9fa94beb40.png)
-![image](https://user-images.githubusercontent.com/121166075/232979075-63dc9f39-f5a5-4698-87a4-9c2d3186a377.png)
+![image](https://github.com/Priya-Loganathan/Experiment--04-Implementation-of-combinational-logic-using-universal-gates/assets/121166075/db94e305-b9bb-408f-bbed-a3f946e370c3)
 
+![image](https://github.com/Priya-Loganathan/Experiment--04-Implementation-of-combinational-logic-using-universal-gates/assets/121166075/af336a37-e1e3-411f-a141-15acd08ad2d5)
 
 ## Timing Diagram
-
 ![image](https://user-images.githubusercontent.com/121166075/232980266-0b0cc768-e227-42ec-b876-4539d310362c.png)
 
 ![image](https://user-images.githubusercontent.com/121166075/232979177-7c60b7cf-0658-43e8-a6e5-1081a70c9ee7.png)
