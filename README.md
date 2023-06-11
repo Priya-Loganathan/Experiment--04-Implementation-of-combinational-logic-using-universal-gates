@@ -35,40 +35,41 @@ Program to implement the given logic function using NAND and NOR gates and to ve
 Developed by: DELLI PRIYA L
 RegisterNumber:  212222230029
 
-module cpmbine(a,b,c,d,f);
-input a,b,c,d;
-output f;
-wire p,q,r;
-assign p=(~c & b & a);
-assign q=(~d & c & c & a);
-assign r=(c & ~b & a);
-assign f=(~(~p & ~q & ~r));
+module f1(A,B,C,D,F1);
+input A,B,C,D;
+output F1;
+wire p,q,r,s,t;
+assign p = (~A & ~B & ~C & ~D);
+assign q = (A & ~C & ~D);
+assign r = (~B & C & ~D);
+assign s = (~A & B & C & D);
+assign t = (B & ~C & D);
+assign F1 = p | q | r | s | t;
 endmodule
 
-module combine1(a,b,c,d,f);
-input a,b,c,d;
-output f;
-wire p,q,r;
-assign p=(c & ~b & a);
-assign q=(d & ~c & a);
-assign r=(c & ~b & a);
-assign f=((p | q & |r));
+module imp(w,x,y,z,F2);
+input w,x,y,z;
+output F2;
+wire p,q,r,s,t;
+assign p= (x & ~y & z);
+assign q= (~x & ~y & z);
+assign r= (~w & x & y);
+assign s= (w & ~x & y);
+assign t= (w & x & y);
+assign F2= p | q | r | s | t;
 endmodule
-
 ```
 
 ## Output:
 ## RTL
-![image](https://github.com/Priya-Loganathan/Experiment--04-Implementation-of-combinational-logic-using-universal-gates/assets/121166075/db94e305-b9bb-408f-bbed-a3f946e370c3)
+![image](https://github.com/Priya-Loganathan/Experiment--04-Implementation-of-combinational-logic-using-universal-gates/assets/121166075/67e45352-b029-4b7b-a477-1b58afd0f4ae)
 
-![image](https://github.com/Priya-Loganathan/Experiment--04-Implementation-of-combinational-logic-using-universal-gates/assets/121166075/af336a37-e1e3-411f-a141-15acd08ad2d5)
+![image](https://github.com/Priya-Loganathan/Experiment--04-Implementation-of-combinational-logic-using-universal-gates/assets/121166075/b58d2b05-2298-4ccf-8407-30bfe724234d)
 
 ## Timing Diagram
-![image](https://user-images.githubusercontent.com/121166075/232980266-0b0cc768-e227-42ec-b876-4539d310362c.png)
+![image](https://github.com/Priya-Loganathan/Experiment--04-Implementation-of-combinational-logic-using-universal-gates/assets/121166075/15f84019-ad8a-4fe6-80af-f3f714be1731)
 
-![image](https://user-images.githubusercontent.com/121166075/232979177-7c60b7cf-0658-43e8-a6e5-1081a70c9ee7.png)
-
-
+![image](https://github.com/Priya-Loganathan/Experiment--04-Implementation-of-combinational-logic-using-universal-gates/assets/121166075/4a420cd3-b8dd-4330-b878-b090a3191a86)
 
 ## Result:
 Thus the given logic functions are implemented using NAND and NOR gates and their operations are verified using Verilog programming.
