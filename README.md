@@ -1,4 +1,4 @@
-# Experiment--04-Implementation-of-combinational-logic-using-universal-gates
+# Experiment--02-Implementation-of-combinational-logic-using-universal-gates
 Implementation of combinational logic using universal-gates
  
 ## AIM:
@@ -35,41 +35,29 @@ Program to implement the given logic function using NAND and NOR gates and to ve
 Developed by: DELLI PRIYA L
 RegisterNumber:  212222230029
 
-module f1(A,B,C,D,F1);
-input A,B,C,D;
-output F1;
-wire p,q,r,s,t;
-assign p = (~A & ~B & ~C & ~D);
-assign q = (A & ~C & ~D);
-assign r = (~B & C & ~D);
-assign s = (~A & B & C & D);
-assign t = (B & ~C & D);
-assign F1 = p | q | r | s | t;
+module ff(a,b,c,d,f1);
+input a,b,c,d;
+output f1;
+assign f1 = (~b&~d) | (~a&b&d) | (a&b&~c);
 endmodule
 
-module imp(w,x,y,z,F2);
+module de (w,x,y,z,f2);
 input w,x,y,z;
-output F2;
-wire p,q,r,s,t;
-assign p= (x & ~y & z);
-assign q= (~x & ~y & z);
-assign r= (~w & x & y);
-assign s= (w & ~x & y);
-assign t= (w & x & y);
-assign F2= p | q | r | s | t;
-endmodule
+output f2;
+assign f2 = (x&y)|(w&y)|(~y&z);
+endmodule 
 ```
 
 ## Output:
 ## RTL
-![image](https://github.com/Priya-Loganathan/Experiment--04-Implementation-of-combinational-logic-using-universal-gates/assets/121166075/67e45352-b029-4b7b-a477-1b58afd0f4ae)
+![image](https://github.com/Priya-Loganathan/Experiment--04-Implementation-of-combinational-logic-using-universal-gates/assets/121166075/77f08910-3d90-4317-b501-d7891fb9e6a7)
 
-![image](https://github.com/Priya-Loganathan/Experiment--04-Implementation-of-combinational-logic-using-universal-gates/assets/121166075/b58d2b05-2298-4ccf-8407-30bfe724234d)
+![image](https://github.com/Priya-Loganathan/Experiment--04-Implementation-of-combinational-logic-using-universal-gates/assets/121166075/c03fdae2-54f7-45c9-a41e-9dcaca3a5946)
 
 ## Timing Diagram
-![image](https://github.com/Priya-Loganathan/Experiment--04-Implementation-of-combinational-logic-using-universal-gates/assets/121166075/15f84019-ad8a-4fe6-80af-f3f714be1731)
+![image](https://github.com/Priya-Loganathan/Experiment--04-Implementation-of-combinational-logic-using-universal-gates/assets/121166075/f2973be4-e385-4070-bd69-fe71486e298f)
 
-![image](https://github.com/Priya-Loganathan/Experiment--04-Implementation-of-combinational-logic-using-universal-gates/assets/121166075/4a420cd3-b8dd-4330-b878-b090a3191a86)
+![image](https://github.com/Priya-Loganathan/Experiment--04-Implementation-of-combinational-logic-using-universal-gates/assets/121166075/c66899bd-dad1-4c28-a412-59d9ffbfa946)
 
 ## Result:
 Thus the given logic functions are implemented using NAND and NOR gates and their operations are verified using Verilog programming.
